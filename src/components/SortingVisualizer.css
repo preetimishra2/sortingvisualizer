@@ -35,16 +35,43 @@
   background-color: #f9f9f9;
 }
 
-.bar {
-  width: 20px;
+.bar-wrapper {
+  position: relative;
+  display: inline-block;
   margin: 0 2px;
-  background-color: teal;
-  transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+.bar {
+  background-color: #4caf50;
+  width: 20px;
+  position: relative;
 }
 
 .bar:hover {
-  background-color: darkcyan;
+  background-color: #66bb6a; /* Highlight color on hover */
 }
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.bar:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
 .complexity-info {
   margin-top: 20px;
   text-align: center;
