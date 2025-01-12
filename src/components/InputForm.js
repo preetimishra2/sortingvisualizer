@@ -24,6 +24,7 @@ const InputForm = ({ onSubmit }) => {
             value={size}
             onChange={(e) => setSize(e.target.value)}
             min="1"
+            max="50"
             className="form-input"
           />
         </label>
